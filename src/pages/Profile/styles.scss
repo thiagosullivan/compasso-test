@@ -1,0 +1,254 @@
+@import "../../global/styles/colors-fonts";
+
+.profilePage {
+  padding-bottom: 3rem;
+  h1 {
+    text-align: center;
+    margin: 2rem 0;
+    color: $--color-gray-first;
+    font-size: 2.5rem;
+    border-bottom: 1px solid $--color-border-gray;
+  }
+  .header__content {
+    img {
+      max-width: 190px;
+      width: 100%;      
+    }
+    a {
+      display: flex;
+      align-items: center;
+      color: $--color-white-first;
+      text-decoration: none;
+      margin-left: auto;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  main {
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 1rem;
+    margin: 0 auto;
+    .sideBar {
+      flex: 1;
+      margin-right: 2rem;
+      .sideBar__img {
+        max-width: 350px;
+        width: 100%;
+        img {
+          border-radius: 50%;
+          width: 100%;
+          height: auto;
+          border: 2px solid $--color-gray-first;
+        }
+      }
+      .sideBar__infos {
+        color: $--color-gray-first;
+        max-width: 300px;
+        h2 {
+          font-size: 1.8rem;
+        }
+        h3 {
+          font-weight: 400;
+        }
+        p {
+          margin: .5rem 0;
+          text-align: justify;
+        }
+        a {
+          display: block;
+          background-color: $--color-black-third;
+          color: $--color-white-first;
+          text-decoration: none;
+          text-align: center;
+          width: 100%;
+          padding: .3rem;
+          margin: 1rem 0;
+          border-radius: 6px;
+          border: 1px solid $--color-gray-second;
+          transition: all 150ms ease-in;
+          &:hover {
+            background-color: $--color-black-second;
+          }
+        }
+        .sideBar__infos__follows {
+          display: flex;
+          align-items: center;
+          span {
+            margin: 0 1rem;
+          }
+          svg {
+            margin-right: .5rem;
+          }
+        }
+        .sideBar__infos__bottom {          
+          p {
+            display: flex;
+            align-items: center;
+            
+            svg {
+              margin-right: .5rem;
+            }
+          }
+        }
+      }
+    }
+    .mainContent {
+      display: flex;
+      justify-content: center;
+      flex-flow: wrap;
+      width: 100%;
+      flex: 3;
+      .repositories__list {
+        max-width: 400px;
+        width: 100%;
+      }
+      .list__infos {
+        border: 1px solid $--color-border-gray;
+        border-radius: 6px;
+        padding: 1rem;
+        margin: .5em .5rem;
+        color: $--color-gray-first;
+        // width: 450px;
+        height: 150px;
+        .list__info__title {
+          display: flex;
+          align-items: center;
+          
+          svg {
+            margin-right: .8rem;            
+          }
+
+          h3 {
+            color: $--color-blue-first;
+            font-size: 1rem;
+          }
+        }
+        p {
+          font-weight: 300;
+          margin: 1rem 0;
+        }
+        .list__infos__bottom {
+          display: flex;
+          align-items: center;
+
+          p {
+            display: flex;
+            align-items: center;
+            margin: 0 .5rem;
+            svg {
+              margin-right: .5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// languages
+.language {
+  display: flex;
+  align-items: center;
+}
+
+.language span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid $--color-gray-second;
+  background-color: #ffffff;
+  margin-right: .5rem;
+}
+.HTML span {
+  background-color: $--color-html;
+}
+.JavaScript span {
+  background-color: $--color-javascript;
+}
+.CSS span {
+  background-color: $--color-css;
+}
+.TypeScript span {
+  background-color: $--color-javascript;
+}
+.PHP span {
+  background-color: $--color-php;
+}
+
+
+//media queries
+
+@media screen and (max-width: 1115px){
+  .profilePage main .mainContent .repositories__list {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 720px){
+
+  .profilePage{
+    h1 {
+      margin: 2rem 1rem;
+    }
+    main {
+      flex-direction: column;
+  
+      .sideBar {
+        margin-right: 0;
+  
+        .sideBar__img {
+          margin: 0 auto;
+          max-width: 50% !important;
+        }
+  
+        .sideBar__infos {
+          max-width: unset !important;
+  
+          h2 {
+            text-align: center;
+          }
+  
+          h3 {
+            text-align: center;
+          }
+          p {
+            text-align: justify;
+          }
+          .sideBar__infos__follows {
+            justify-content: center;
+            margin-bottom: .5rem;
+          }
+          .sideBar__infos__bottom {
+            border-top: 1px solid $--color-border-gray;
+            padding-top: .5rem;
+            p {
+              justify-content: center;
+            }
+          }
+        }
+      } 
+    }
+  }
+}
+
+@media screen and (max-width: 460px){
+  .profilePage header .header__content {
+    flex-direction: column;
+    img {
+      order: 2;
+      margin-top: 1rem;
+    }
+    a {
+      order: 1;
+      font-size: 1.3rem;
+    }
+  }
+  .list__infos {
+    height: auto !important;
+  }
+}

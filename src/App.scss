@@ -1,0 +1,19 @@
+@import "./global/styles/colors-fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, input, button {
+  border: none;
+  background: none;
+  font-family: $--font-family-Rajdhani;
+}
+
+body {
+  background-color: $--color-black-first;
+  height: 100vh;
+  font-family: $--font-family-Rajdhani;
+}
