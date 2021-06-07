@@ -45,6 +45,7 @@ header {
         transition: transform 150ms ease-in;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
+        font-weight: bold;
         &:active {
           transform: scale(1.2);
         }
@@ -145,7 +146,7 @@ header {
   }
 }
 
-.extraResults {
+.secondResult {
   display: flex;
   justify-content: space-evenly;
 
@@ -157,6 +158,10 @@ header {
       box-shadow: 0 5px 10px rgba(0,0,0, .8);
       font-weight: 800;
       font-size: 1.5rem;
+      cursor: pointer;
+      &:active {
+        transform: scale(1.1);
+      }
   }
   .repositories {
     max-width: 600px;
@@ -317,7 +322,7 @@ header {
       }
     }
     
-    .extraResults {
+    .secondResult {
       flex-direction: column;
       align-items: center;
     }
