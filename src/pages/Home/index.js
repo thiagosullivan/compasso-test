@@ -9,6 +9,7 @@ import StarredHome from '../../components/HomePage/Starred/index';
 import './styles.scss';
 
 import logoImg from '../../assets/github-finder.png';
+import HomeTxt from '../../components/HomePage/HomeTxt';
 
 function HomePage() {
 
@@ -70,7 +71,6 @@ function HomePage() {
 
   return (
     <main>
-      {/* <HeaderHome userSearch={userSearch} showError={showError} /> */}
       <header>
         <div className="header__content">
           <Link to="/">
@@ -107,7 +107,7 @@ function HomePage() {
             </div>
           </div>
         </section>
-    ) : null}
+    ) : <HomeTxt />}
     </main>
   );
 }

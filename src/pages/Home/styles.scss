@@ -54,6 +54,60 @@ header {
   }
 }
 
+.mainText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: calc(100vh - 119px);
+  font-size: 8rem;
+  color: $--color-gray-first;
+  line-height: 1;
+  text-transform: uppercase;
+
+  span {
+    filter: brightness(0) invert(1);    
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorCycle 6s ease-in-out infinite;
+  }
+  span:nth-child(1){
+    background-image: linear-gradient(90deg, #007cf0, #00dfd8);    
+  }
+  span:nth-child(2){
+    background-image: linear-gradient(90deg, #7928ca, #ff0080);
+    animation-delay: 2s;
+  }
+  span:nth-child(3){
+    background-image: linear-gradient(90deg, #ff4d4d, #f9cb28);
+    animation-delay: 4s;
+  }
+}
+
+@media screen and (max-width: 660px){
+  .mainText {
+    font-size: 5rem;
+    height: calc(100vh - 200px);
+  }
+}
+
+@keyframes colorCycle {
+  0% {
+    filter: brightness(0) invert(1),
+  }
+  11% {
+    filter: none;
+  }
+  33% {
+    filter: none;
+  }
+  55% {
+    filter: brightness(0) invert(1),
+  }
+}
+
 .results {
   margin: 4rem auto;
   max-width: 1300px;
