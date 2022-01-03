@@ -34,7 +34,7 @@ function Profile() {
 
   return (
     <div className="profilePage">
-      <Header />
+      <Header id="header_profile" />
       <h1>{user.name} Profile</h1>
       <main>
         <Sidebar user={user}/>

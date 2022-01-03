@@ -11,9 +11,13 @@ header {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;    
+    justify-content: space-evenly;
+    
+    .logo img {
+      max-width: 190px;
+    }
 
-    a {
+    .goBackLink {
       max-width: 190px;
       margin-right: 1rem;
       img {

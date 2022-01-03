@@ -8,9 +8,11 @@ import { IoIosArrowBack } from 'react-icons/io';
 function HeaderProfile() {
   return (
       <header>
-        <div className="header__content">
-          <img className="logo" src={logoImg} alt="Github Finder logo" />
-          <Link to="/">
+        <div className="header__content header__profile">
+          <Link className="logo" to="/">
+            <img src={logoImg} alt="Github Finder logo" />
+          </Link>
+          <Link className='goBackLink' to="/">
             <IoIosArrowBack />
             <p>Go Back</p>
           </Link>

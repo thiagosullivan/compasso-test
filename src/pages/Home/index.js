@@ -73,7 +73,7 @@ function HomePage() {
     <main>
       <header>
         <div className="header__content">
-          <Link to="/">
+          <Link className='logo' to="/">
             <img src={logoImg} alt="GitFinder" />
           </Link>
           <form className="header__content__search" onSubmit={(event) => searchingData(event)}>
